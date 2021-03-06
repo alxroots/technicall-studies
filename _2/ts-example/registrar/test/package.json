@@ -1,0 +1,15 @@
+{
+  "name": "test",
+  "description": "Test suit for student registrar library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "pretest": "cd .. && yarn run build",
+    "test": "rm -f registrardb.sqlite && mocha ./index"
+  },
+  "devDependencies": {
+    "chai": "^4.3.3",
+    "mocha": "^8.3.1"
+  }
+}

@@ -1,8 +1,15 @@
 {
   "name": "registrar",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.js",
+  "type": "commonjs",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "cd test && npm run test"
+  },
   "dependencies": {
     "@types/node": "^14.14.31",
     "reflect-metadata": "^0.1.13",
