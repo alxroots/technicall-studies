@@ -59,4 +59,7 @@
   }
 }
 ```
+9. Criado a pasta Lib dentro de registrar
+10. Criado um arquivo index.ts com umas configurações
+
 
