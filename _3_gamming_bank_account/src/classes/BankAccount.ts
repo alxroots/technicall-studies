@@ -17,14 +17,14 @@ export class BankAccountV2 {
         public number: number,
     ){}
     
-    getReport(): void {
-        console.log("| ========== RESUMO DA CONTA =========== |");
-        console.log(`|  A - Nome:  ${this.nome}`)
-        console.log(`|  B - Saldo atual:  ${this.saldo}`)
-        console.log(`|  C - Limite atual:  ${this.limite}`);
-        console.log(`|  D - Numero da conta:  ${this.number}`);
-        console.log("| ========== XXXXXXXXXXXXXXX =========== |");
-        console.log("")
+    getReport(): string {
+        return (
+        `| ========== RESUMO DA CONTA =========== |\n
+            Nome:  ${this.nome}
+            Saldo atual:  ${this.saldo}
+            Limite atual:  ${this.limite}
+            Numero da conta:  ${this.number}\n`
+        )
     }
 
     setSaldo(value: number, op:number ): number {
