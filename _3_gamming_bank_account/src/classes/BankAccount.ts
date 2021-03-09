@@ -11,19 +11,19 @@ export class BankAccount {
 
 export class BankAccountV2 {
     constructor(
-        public saldo: number,
-        public limite: number,
-        public nome: string,
-        public number: number,
+        private _saldo: number,
+        private _limite: number,
+        private _nome: string,
+        private _number: number,
     ){}
     
-    getReport(): string {
+    get Report(): string {
         return (
         `| ========== RESUMO DA CONTA =========== |\n
-            Nome:  ${this.nome}
-            Saldo atual:  ${this.saldo}
-            Limite atual:  ${this.limite}
-            Numero da conta:  ${this.number}\n`
+            Nome:  ${this._nome}
+            Saldo atual:  ${this._saldo}
+            Limite atual:  ${this._limite}
+            Numero da conta:  ${this._number}\n`
         )
     }
 
@@ -34,7 +34,7 @@ export class BankAccountV2 {
             if (value < 0){
                 throw new AppError('Error: We expected a positive value.');
             }
-            const subtotal = this.saldo - value;
+            const subtotal = this._saldo - value;
     
             if (subtotal < 0) {
                 throw new AppError('Error: You have no balance enough for this operation.');
@@ -42,7 +42,7 @@ export class BankAccountV2 {
             console.clear()
             console.log("+======= DEPÓSITO EFETUADO COM SUCESSO =======+");
             console.log("")
-            return this.saldo = subtotal;
+            return this._saldo = subtotal;
         }
 
         //credita na conta
@@ -52,7 +52,7 @@ export class BankAccountV2 {
         console.clear()
         console.log("+======= SAQUE EFETUADO COM SUCESSO =======+");
         console.log("")
-        return this.saldo += value;
+        return this._saldo += value;
         
     }
 
@@ -61,16 +61,16 @@ export class BankAccountV2 {
         if (value < 0){
             throw new AppError('Error: We expected a positive value.');
         }
-        if (value > this.saldo * 0.25){
+        if (value > this._saldo * 0.25){
             throw new AppError(
                 'Error: Operação encerrada, você não tem saldo suficiente para solicitar este limite (25% do saldo)'
             )
         }
-        this.limite += value;
+        this._limite += value;
         console.clear()
         console.log("+======= ALTERAÇÃO EFETUADO COM SUCESSO =======+");
         console.log("")
-        return this.limite
+        return this._limite
     }
     
 }   

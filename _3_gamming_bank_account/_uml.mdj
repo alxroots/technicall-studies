@@ -362,7 +362,41 @@
 											"top": 79,
 											"width": 431.716796875,
 											"height": 13,
-											"text": "+getReport(): void",
+											"text": "+getReport(): string",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF4FAozi/p3jFE=",
+											"_parent": {
+												"$ref": "AAAAAAF4Ep1BlMR8ekU="
+											},
+											"model": {
+												"$ref": "AAAAAAF4FAozePp0k48="
+											},
+											"font": "Arial;13;0",
+											"left": 525,
+											"top": 94,
+											"width": 431.716796875,
+											"height": 13,
+											"text": "+setSaldo(value: number, op: number): number",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF4FBFPSPqEIeo=",
+											"_parent": {
+												"$ref": "AAAAAAF4Ep1BlMR8ekU="
+											},
+											"model": {
+												"$ref": "AAAAAAF4FBFPO/qBaZQ="
+											},
+											"font": "Arial;13;0",
+											"left": 525,
+											"top": 109,
+											"width": 431.716796875,
+											"height": 13,
+											"text": "+setLimite(value: number): number",
 											"horizontalAlignment": 0
 										}
 									],
@@ -370,7 +404,7 @@
 									"left": 520,
 									"top": 59,
 									"width": 441.716796875,
-									"height": 38
+									"height": 68
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -553,7 +587,72 @@
 									"_parent": {
 										"$ref": "AAAAAAF4Ep+iuMSvIr8="
 									},
-									"type": "void",
+									"type": "string",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF4FAozePp0k48=",
+							"_parent": {
+								"$ref": "AAAAAAF4Ep1Bk8RzAoM="
+							},
+							"name": "setSaldo",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4FAv/Tvp7TBc=",
+									"_parent": {
+										"$ref": "AAAAAAF4FAozePp0k48="
+									},
+									"name": "value",
+									"type": "number"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4FAv/Tvp8Esg=",
+									"_parent": {
+										"$ref": "AAAAAAF4FAozePp0k48="
+									},
+									"name": "op",
+									"type": "number"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4FAv/Tvp9mC4=",
+									"_parent": {
+										"$ref": "AAAAAAF4FAozePp0k48="
+									},
+									"type": "number",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF4FBFPO/qBaZQ=",
+							"_parent": {
+								"$ref": "AAAAAAF4Ep1Bk8RzAoM="
+							},
+							"name": "setLimite",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4FBGwr/qIqug=",
+									"_parent": {
+										"$ref": "AAAAAAF4FBFPO/qBaZQ="
+									},
+									"name": "value",
+									"type": "number"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4FBGwr/qJ8ps=",
+									"_parent": {
+										"$ref": "AAAAAAF4FBFPO/qBaZQ="
+									},
+									"type": "number",
 									"direction": "return"
 								}
 							]

@@ -117,7 +117,7 @@ if (version_option === 2){
         switch (option) {
             case 1:
                 console.clear()
-                console.log(accOne_v2.getReport())
+                console.log(accOne_v2.Report)
                 console.log('')
                 console.log('')
                 
@@ -129,7 +129,7 @@ if (version_option === 2){
                 const sacado = +inputPrompt("Digite o valor a ser sacado: R$")
 
                 accOne_v2.setSaldo(sacado, option);
-                console.log(accOne_v2.getReport())
+                console.log(accOne_v2.Report)
 
                 break;
             case 3:
@@ -139,7 +139,7 @@ if (version_option === 2){
                 const depositado = +inputPrompt("Digite o valor a ser sacado: R$")
 
                 accOne_v2.setSaldo(depositado, option);
-                console.log(accOne_v2.getReport())
+                console.log(accOne_v2.Report)
 
                 break;
             
@@ -150,7 +150,7 @@ if (version_option === 2){
                 const solicitado = +inputPrompt("Digite o valor desejado a acrescentar no seu limite: R$")
                 
                 accOne_v2.setLimite(solicitado)
-                console.log(accOne_v2.getReport())
+                console.log(accOne_v2.Report)
                 break;
     
             default:
